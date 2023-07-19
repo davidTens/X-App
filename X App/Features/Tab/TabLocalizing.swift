@@ -1,3 +1,5 @@
 import Foundation
 
-protocol TabLocalizing {}
+protocol TabLocalizing {
+    var title: String { get }
+}

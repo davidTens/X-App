@@ -19,6 +19,7 @@
 		63D9B1D22A67E647001A4FCA /* DefaultTabLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9B1D12A67E647001A4FCA /* DefaultTabLocalizer.swift */; };
 		63D9B1D52A67E6E5001A4FCA /* TabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9B1D42A67E6E5001A4FCA /* TabItems.swift */; };
 		63D9B1D82A67EDC9001A4FCA /* DynamicTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9B1D72A67EDC9001A4FCA /* DynamicTabView.swift */; };
+		63D9B1DD2A68086A001A4FCA /* Tab.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63D9B1DF2A68086A001A4FCA /* Tab.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		63D9B1D12A67E647001A4FCA /* DefaultTabLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTabLocalizer.swift; sourceTree = "<group>"; };
 		63D9B1D42A67E6E5001A4FCA /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
 		63D9B1D72A67EDC9001A4FCA /* DynamicTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTabView.swift; sourceTree = "<group>"; };
+		63D9B1DE2A68086A001A4FCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Tab.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		63D9B19D2A67E5BA001A4FCA /* X App */ = {
 			isa = PBXGroup;
 			children = (
+				63D9B1D92A68079C001A4FCA /* Resources */,
 				63D9B1D62A67EDB4001A4FCA /* DynamicTab */,
 				63D9B1D32A67E6DB001A4FCA /* TabItems */,
 				63D9B1C92A67E5CC001A4FCA /* Features */,
@@ -174,6 +177,22 @@
 				63D9B1D72A67EDC9001A4FCA /* DynamicTabView.swift */,
 			);
 			path = DynamicTab;
+			sourceTree = "<group>";
+		};
+		63D9B1D92A68079C001A4FCA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63D9B1DA2A6807A7001A4FCA /* Strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		63D9B1DA2A6807A7001A4FCA /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				63D9B1DF2A68086A001A4FCA /* Tab.strings */,
+			);
+			name = Strings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63D9B1A72A67E5BB001A4FCA /* Preview Assets.xcassets in Resources */,
+				63D9B1DD2A68086A001A4FCA /* Tab.strings in Resources */,
 				63D9B1A32A67E5BB001A4FCA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +367,17 @@
 			targetProxy = 63D9B1B72A67E5BB001A4FCA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		63D9B1DF2A68086A001A4FCA /* Tab.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63D9B1DE2A68086A001A4FCA /* en */,
+			);
+			name = Tab.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		63D9B1BE2A67E5BB001A4FCA /* Debug */ = {
