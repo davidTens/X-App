@@ -13,7 +13,7 @@ final class TabViewModel: ObservableObject {
 
     // MARK: - dependencies
 
-    private let localier: TabLocalizing
+    let localizer: any TabLocalizing
 
     // MARK: - input
 
@@ -23,9 +23,9 @@ final class TabViewModel: ObservableObject {
     // MARK: - init
 
     init(
-        localier: TabLocalizing
+        localizer: TabLocalizing
     ) {
-        self.localier = localier
+        self.localizer = localizer
 
         setupBindings()
     }

@@ -12,6 +12,7 @@ struct TabScene: View {
     // MARK: - dependencies
 
     @ObservedObject private var viewModel: TabViewModel
+    private var localizer: any TabLocalizing { viewModel.localizer }
 
     // MARK: - init
 
@@ -45,7 +46,7 @@ struct TabScene_Previews: PreviewProvider {
         // TODO: replace with mocks
 
         let tabViewModel = TabViewModel(
-            localier: DefaultTabLocalizer()
+            localizer: DefaultTabLocalizer()
         )
         TabScene(viewModel: tabViewModel)
     }

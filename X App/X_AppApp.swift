@@ -12,7 +12,7 @@ struct X_AppApp: App {
     var body: some Scene {
         WindowGroup {
             let tabViewModel = TabViewModel(
-                localier: DefaultTabLocalizer()
+                localizer: DefaultTabLocalizer()
             )
             TabScene(viewModel: tabViewModel)
         }
