@@ -9,11 +9,19 @@ import SwiftUI
 
 struct TabScene: View {
 
+    // MARK: - dependencies
+
     @ObservedObject private var viewModel: TabViewModel
 
-    init(viewModel: TabViewModel) {
+    // MARK: - init
+
+    init(
+        viewModel: TabViewModel
+    ) {
         self.viewModel = viewModel
     }
+
+    // MARK: - body
 
     var body: some View {
         VStack {
