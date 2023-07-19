@@ -39,6 +39,9 @@ struct TabScene: View {
 
 struct TabScene_Previews: PreviewProvider {
     static var previews: some View {
+
+        // TODO: replace with mocks
+
         let tabViewModel = TabViewModel(
             localier: DefaultTabLocalizer()
         )
