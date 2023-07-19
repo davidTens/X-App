@@ -58,7 +58,7 @@ struct DynamicTabView: View {
             .renderingMode(.template)
             .frame(width: 25, height: 25)
             .foregroundColor(
-                selectedTab == item ? .white : .init(white: 0.6)
+                selectedTab == item ? Color("TabTintColor") : .init(white: 0.6)
             )
             .opacity(
                 tabState == .collapsed ? selectedTab == item ? 1.0 : 0.0 : 1.0
