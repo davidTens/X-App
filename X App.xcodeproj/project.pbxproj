@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		63D9B19F2A67E5BA001A4FCA /* X_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9B19E2A67E5BA001A4FCA /* X_AppApp.swift */; };
-		63D9B1A12A67E5BA001A4FCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9B1A02A67E5BA001A4FCA /* ContentView.swift */; };
 		63D9B1A32A67E5BB001A4FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D9B1A22A67E5BB001A4FCA /* Assets.xcassets */; };
 		63D9B1A72A67E5BB001A4FCA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D9B1A62A67E5BB001A4FCA /* Preview Assets.xcassets */; };
 		63D9B1B12A67E5BB001A4FCA /* X_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9B1B02A67E5BB001A4FCA /* X_AppTests.swift */; };
@@ -42,7 +41,6 @@
 /* Begin PBXFileReference section */
 		63D9B19B2A67E5BA001A4FCA /* X App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D9B19E2A67E5BA001A4FCA /* X_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X_AppApp.swift; sourceTree = "<group>"; };
-		63D9B1A02A67E5BA001A4FCA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		63D9B1A22A67E5BB001A4FCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63D9B1A42A67E5BB001A4FCA /* X_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = X_App.entitlements; sourceTree = "<group>"; };
 		63D9B1A62A67E5BB001A4FCA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 				63D9B1D32A67E6DB001A4FCA /* TabItems */,
 				63D9B1C92A67E5CC001A4FCA /* Features */,
 				63D9B19E2A67E5BA001A4FCA /* X_AppApp.swift */,
-				63D9B1A02A67E5BA001A4FCA /* ContentView.swift */,
 				63D9B1A22A67E5BB001A4FCA /* Assets.xcassets */,
 				63D9B1A42A67E5BB001A4FCA /* X_App.entitlements */,
 				63D9B1A52A67E5BB001A4FCA /* Preview Content */,
@@ -311,7 +308,6 @@
 			files = (
 				63D9B1CE2A67E5F5001A4FCA /* TabViewModel.swift in Sources */,
 				63D9B1D02A67E62D001A4FCA /* TabLocalizing.swift in Sources */,
-				63D9B1A12A67E5BA001A4FCA /* ContentView.swift in Sources */,
 				63D9B19F2A67E5BA001A4FCA /* X_AppApp.swift in Sources */,
 				63D9B1D52A67E6E5001A4FCA /* TabItems.swift in Sources */,
 				63D9B1CC2A67E5EA001A4FCA /* TabScene.swift in Sources */,
