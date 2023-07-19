@@ -22,6 +22,7 @@
 		63D9B1DD2A68086A001A4FCA /* Tab.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63D9B1DF2A68086A001A4FCA /* Tab.strings */; };
 		63D9B1E32A681907001A4FCA /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9B1E22A681907001A4FCA /* HomeScene.swift */; };
 		63D9B1E62A681999001A4FCA /* FeedScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9B1E52A681999001A4FCA /* FeedScene.swift */; };
+		63D9B1E92A6819E1001A4FCA /* ChatScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9B1E82A6819E1001A4FCA /* ChatScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		63D9B1E02A680AA2001A4FCA /* X-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "X-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		63D9B1E22A681907001A4FCA /* HomeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScene.swift; sourceTree = "<group>"; };
 		63D9B1E52A681999001A4FCA /* FeedScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedScene.swift; sourceTree = "<group>"; };
+		63D9B1E82A6819E1001A4FCA /* ChatScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		63D9B1C92A67E5CC001A4FCA /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				63D9B1E72A6819D3001A4FCA /* Chat */,
 				63D9B1E42A681992001A4FCA /* Feed */,
 				63D9B1E12A6818FE001A4FCA /* Home */,
 				63D9B1CA2A67E5D9001A4FCA /* Tab */,
@@ -217,6 +220,14 @@
 				63D9B1E52A681999001A4FCA /* FeedScene.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		63D9B1E72A6819D3001A4FCA /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				63D9B1E82A6819E1001A4FCA /* ChatScene.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D9B1E92A6819E1001A4FCA /* ChatScene.swift in Sources */,
 				63D9B1CE2A67E5F5001A4FCA /* TabViewModel.swift in Sources */,
 				63D9B1E32A681907001A4FCA /* HomeScene.swift in Sources */,
 				63D9B1E62A681999001A4FCA /* FeedScene.swift in Sources */,
