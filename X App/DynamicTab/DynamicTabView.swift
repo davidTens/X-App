@@ -11,17 +11,19 @@ struct DynamicTabView: View {
     @Binding private(set) var selectedTab: TabItems
 
     var body: some View {
-        HStack {
-            Spacer()
-            tabView()
-                .padding(
-                    EdgeInsets(
-                        top: 0,
-                        leading: 0,
-                        bottom: 16,
-                        trailing: 25
-                    )
+        VStack {
+            HStack {
+                Spacer()
+                tabView()
+            }
+            .padding(
+                EdgeInsets(
+                    top: 0,
+                    leading: 0,
+                    bottom: 16,
+                    trailing: 25
                 )
+            )
         }
     }
 
@@ -42,8 +44,12 @@ struct DynamicTabView: View {
                                 )
                         }
                     }
+                    .frame(width: 70, height: geometry.size.height)
                 }
             }
+            .foregroundColor(Color("TabColor"))
+            .frame(width: 70, height: tabState == .collapsed ? 70 : 200)
+            .cornerRadius(tabState == .collapsed ? 35 : 5)
     }
 
     private func tabItemView(_ item: TabItems) -> some View {
@@ -52,7 +58,7 @@ struct DynamicTabView: View {
             .renderingMode(.template)
             .frame(width: 25, height: 25)
             .foregroundColor(
-                selectedTab == item ? .white : .brown
+                selectedTab == item ? .white : .init(white: 0.6)
             )
             .opacity(
                 tabState == .collapsed ? selectedTab == item ? 1.0 : 0.0 : 1.0

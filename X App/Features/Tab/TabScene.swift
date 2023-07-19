@@ -24,16 +24,18 @@ struct TabScene: View {
     // MARK: - body
 
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-                .onTapGesture {
-                    viewModel.didSingleTap.send(.feed)
-                }
+        ZStack {
+            Color.accentColor
+                .ignoresSafeArea()
+            VStack {
+                Text("X app")
+                    .font(.init(.custom("Avenir Next", size: 50)))
+                    .padding(.init(top: 130, leading: 50, bottom: 0, trailing: 0))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Spacer()
+                DynamicTabView(selectedTab: .constant(.home))
+            }
         }
-        .padding()
     }
 }
 
