@@ -9,6 +9,7 @@ struct DynamicTabView: View {
 
     @State private var tabState: TabState = .collapsed
     @Binding private(set) var selectedTab: TabItems
+    private(set) var action: ((TabItems) -> Void)
 
     var body: some View {
         VStack {
@@ -52,6 +53,7 @@ struct DynamicTabView: View {
             .cornerRadius(tabState == .collapsed ? 35 : 5)
     }
 
+    @ViewBuilder
     private func tabItemView(_ item: TabItems) -> some View {
         Image(item.rawValue)
             .resizable()
@@ -77,6 +79,7 @@ struct DynamicTabView: View {
                         tabState = .expanded
                     case .expanded:
                         tabState = .collapsed
+                        action(item)
                     }
                 }
             }

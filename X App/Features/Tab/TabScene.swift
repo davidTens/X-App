@@ -7,6 +7,10 @@ struct TabScene: View {
     @ObservedObject private var viewModel: TabViewModel
     private var localizer: any TabLocalizing { viewModel.localizer }
 
+    // MARK: - Props
+
+    @State private var selectedTab: TabItems = .home
+
     // MARK: - init
 
     init(
@@ -27,7 +31,11 @@ struct TabScene: View {
                     .padding(.init(top: 130, leading: 50, bottom: 0, trailing: 0))
                     .frame(maxWidth: .infinity, alignment: .leading)
                 Spacer()
-                DynamicTabView(selectedTab: .constant(.home))
+                DynamicTabView(
+                    selectedTab: $selectedTab
+                ) { item in
+                    viewModel.didSingleTap.send(item)
+                }
             }
         }
     }
