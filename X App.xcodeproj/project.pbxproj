@@ -57,6 +57,7 @@
 		63D9B1D42A67E6E5001A4FCA /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
 		63D9B1D72A67EDC9001A4FCA /* DynamicTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTabView.swift; sourceTree = "<group>"; };
 		63D9B1DE2A68086A001A4FCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Tab.strings; sourceTree = "<group>"; };
+		63D9B1E02A680AA2001A4FCA /* X-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "X-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +108,7 @@
 		63D9B19D2A67E5BA001A4FCA /* X App */ = {
 			isa = PBXGroup;
 			children = (
+				63D9B1E02A680AA2001A4FCA /* X-App-Info.plist */,
 				63D9B1D92A68079C001A4FCA /* Resources */,
 				63D9B1D62A67EDB4001A4FCA /* DynamicTab */,
 				63D9B1D32A67E6DB001A4FCA /* TabItems */,
@@ -500,6 +502,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"X App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "X-App-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -536,6 +539,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"X App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "X-App-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

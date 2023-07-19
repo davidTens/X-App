@@ -83,5 +83,8 @@ struct DynamicTabView: View {
                     }
                 }
             }
+            .onLongPressGesture {
+                print("[TabScene] \(item.rawValue) press and hold")
+            }
     }
 }

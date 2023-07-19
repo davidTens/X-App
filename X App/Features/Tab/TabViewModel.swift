@@ -12,6 +12,7 @@ final class TabViewModel: ObservableObject {
 
     private var cancellables = [AnyCancellable]()
     lazy var didSingleTap = PassthroughSubject<TabItems, Never>()
+    lazy var didLongPressTap = PassthroughSubject<TabItems, Never>()
 
     // MARK: - init
 
@@ -24,16 +25,21 @@ final class TabViewModel: ObservableObject {
     }
 
     private func setupBindings() {
+        // the event must be sent to coordinator
+        // coordinator should be responsible to draw corresponding view
+        // in the tab coordinator make sure the object is subscribed to *didSingleTap* ^^
+        // so it will be able to recieve events and act accordingly
+
         didSingleTap
             .sink(receiveValue:  { item in
-                // the event must be sent to coordinator
-                // coordinator should be responsible to draw corresponding view
-                // in the tab coordinator make sure the object is subscribed to *didSingleTap* ^^
-                // so it will be able to recieve events and act accordingly
                 Logger().debug(
                     "::[TabViewModel] \(item.rawValue) tapped"
                 )
             })
+            .store(in: &cancellables)
+
+        didLongPressTap
+            .sink(receiveValue: { item in })
             .store(in: &cancellables)
     }
 }
