@@ -11,7 +11,10 @@ import SwiftUI
 struct X_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let tabViewModel = TabViewModel(
+                localier: DefaultTabLocalizer()
+            )
+            TabScene(viewModel: tabViewModel)
         }
     }
 }
