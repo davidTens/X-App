@@ -1,4 +1,5 @@
 import SwiftUI
+import OSLog
 
 enum TabState {
     case collapsed
@@ -84,7 +85,9 @@ struct DynamicTabView: View {
                 }
             }
             .onLongPressGesture {
-                print("[TabScene] \(item.rawValue) press and hold")
+                Logger().debug(
+                    "[TabScene] \(item.rawValue) press and hold"
+                )
             }
     }
 }
