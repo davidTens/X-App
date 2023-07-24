@@ -14,6 +14,8 @@ struct DynamicTabView: View {
 
     var body: some View {
         VStack {
+            Color.accentColor
+                .ignoresSafeArea()
             HStack {
                 Spacer()
                 tabView()

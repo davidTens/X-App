@@ -93,6 +93,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63CFB73C2A6EBDB100411E33 /* XUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XUI;
+			sourceTree = "<group>";
+		};
 		63D9B1922A67E5BA001A4FCA = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +123,7 @@
 		63D9B19D2A67E5BA001A4FCA /* X App */ = {
 			isa = PBXGroup;
 			children = (
+				63CFB73C2A6EBDB100411E33 /* XUI */,
 				63D9B1E02A680AA2001A4FCA /* X-App-Info.plist */,
 				63D9B1D92A68079C001A4FCA /* Resources */,
 				63D9B1D62A67EDB4001A4FCA /* DynamicTab */,
