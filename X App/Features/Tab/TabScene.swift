@@ -33,7 +33,7 @@ struct TabScene<Content: View, Items: RandomAccessCollection>: View where Items.
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             selectedProperty
-            DynamicTabV2(items: items, selectedTab: $selectedTab) { item in
+            DynamicTabBar(items: items, selectedTab: $selectedTab) { item in
                 item.icon
                     .resizable()
                     .renderingMode(.template)
@@ -47,5 +47,35 @@ struct TabScene<Content: View, Items: RandomAccessCollection>: View where Items.
 
     private var selectedProperty: some View {
         content(selectedTab)
+    }
+}
+
+struct TabScene_Previews: PreviewProvider {
+    
+    private struct BlahView: View {
+        @State private var selectedTab: TabItems = .home
+        var body: some View {
+            TabScene(items: TabItems.allCases, selectedTab: $selectedTab, content: { feature in
+                switch feature {
+                case .home:
+                    NavigationStack {
+                        HomeScene()
+                    }
+                case .feed:
+                    NavigationStack {
+                        FeedScene()
+                    }
+                case .chat:
+                    NavigationStack {
+                        ChatScene()
+                    }
+                case .profile:
+                    ProfileFeed()
+                }
+            }, viewModel: TabViewModel(localizer: DefaultTabLocalizer()))
+        }
+    }
+    static var previews: some View {
+        BlahView()
     }
 }
