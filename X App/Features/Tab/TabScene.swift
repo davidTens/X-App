@@ -1,54 +1,51 @@
 import SwiftUI
 
-struct TabScene: View {
+struct TabScene<Content: View, Items: RandomAccessCollection>: View where Items.Element: Identifiable & Hashable & IconsProviding {
 
     // MARK: - dependencies
+
+    private let content: (Items.Element) -> Content
+    private let items: Items
 
     @ObservedObject private var viewModel: TabViewModel
     private var localizer: any TabLocalizing { viewModel.localizer }
 
     // MARK: - Props
 
-    @State private var selectedTab: TabItems = .home
+    @Binding private var selectedTab: Items.Element
 
     // MARK: - init
 
     init(
+        items: Items,
+        selectedTab: Binding<Items.Element>,
+        @ViewBuilder content: @escaping(Items.Element) -> Content,
         viewModel: TabViewModel
     ) {
+        self.content = content
+        _selectedTab = selectedTab
+        self.items = items
         self.viewModel = viewModel
     }
 
     // MARK: - body
 
     var body: some View {
-        ZStack {
-            Color.accentColor
-                .ignoresSafeArea()
-            VStack {
-                Text(localizer.title)
-                    .font(.init(.custom("Avenir Next", size: 50)))
-                    .padding(.init(top: 130, leading: 50, bottom: 0, trailing: 0))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                Spacer()
-                DynamicTabView(
-                    selectedTab: $selectedTab
-                ) { item in
-                    viewModel.didSingleTap.send(item)
-                }
+        ZStack(alignment: .bottomTrailing) {
+            selectedProperty
+            DynamicTabV2(items: items, selectedTab: $selectedTab) { item in
+                item.icon
+                    .resizable()
+                    .renderingMode(.template)
+                    .scaledToFit()
+                    .frame(width: 25, height: 25)
+                
             }
+            .padding(.init(top: 0, leading: 0, bottom: 20, trailing: 20))
         }
     }
-}
 
-struct TabScene_Previews: PreviewProvider {
-    static var previews: some View {
-
-        // TODO: replace with mocks
-
-        let tabViewModel = TabViewModel(
-            localizer: DefaultTabLocalizer()
-        )
-        TabScene(viewModel: tabViewModel)
+    private var selectedProperty: some View {
+        content(selectedTab)
     }
 }
