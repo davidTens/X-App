@@ -43,7 +43,6 @@ struct CustomTabView<Content: View, Items: RandomAccessCollection>: View where I
                     .renderingMode(.template)
                     .scaledToFit()
                     .frame(width: 25, height: 25)
-                
             }
             .padding(.init(top: 0, leading: 0, bottom: 20, trailing: 20))
         }
