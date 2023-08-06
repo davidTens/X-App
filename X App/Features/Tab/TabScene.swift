@@ -1,6 +1,10 @@
 import SwiftUI
 
-struct TabScene<Content: View, Items: RandomAccessCollection>: View where Items.Element: Identifiable & Hashable & IconsProviding {
+protocol IconsProviding {
+    var icon: Image { get }
+}
+
+struct CustomTabView<Content: View, Items: RandomAccessCollection>: View where Items.Element: Identifiable & Hashable & IconsProviding {
 
     // MARK: - dependencies
 
@@ -55,7 +59,7 @@ struct TabScene_Previews: PreviewProvider {
     private struct BlahView: View {
         @State private var selectedTab: TabItems = .home
         var body: some View {
-            TabScene(items: TabItems.allCases, selectedTab: $selectedTab, content: { feature in
+            CustomTabView(items: TabItems.allCases, selectedTab: $selectedTab, content: { feature in
                 switch feature {
                 case .home:
                     NavigationStack {
@@ -75,6 +79,7 @@ struct TabScene_Previews: PreviewProvider {
             }, viewModel: TabViewModel(localizer: DefaultTabLocalizer()))
         }
     }
+
     static var previews: some View {
         BlahView()
     }

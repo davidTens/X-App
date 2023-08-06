@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63CFB73E2A6ECD0800411E33 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CFB73D2A6ECD0800411E33 /* CustomTabView.swift */; };
 		63D9B19F2A67E5BA001A4FCA /* X_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9B19E2A67E5BA001A4FCA /* X_AppApp.swift */; };
 		63D9B1A32A67E5BB001A4FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D9B1A22A67E5BB001A4FCA /* Assets.xcassets */; };
 		63D9B1A72A67E5BB001A4FCA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D9B1A62A67E5BB001A4FCA /* Preview Assets.xcassets */; };
@@ -45,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		63CFB73D2A6ECD0800411E33 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		63D9B19B2A67E5BA001A4FCA /* X App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D9B19E2A67E5BA001A4FCA /* X_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X_AppApp.swift; sourceTree = "<group>"; };
 		63D9B1A22A67E5BB001A4FCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				63D9B1CB2A67E5EA001A4FCA /* TabScene.swift */,
-				63CFB73D2A6ECD0800411E33 /* CustomTabView.swift */,
 				63D9B1CD2A67E5F5001A4FCA /* TabViewModel.swift */,
 				63D9B1CF2A67E62D001A4FCA /* TabLocalizing.swift */,
 				63D9B1D12A67E647001A4FCA /* DefaultTabLocalizer.swift */,
@@ -386,7 +383,6 @@
 				63D9B1E92A6819E1001A4FCA /* ChatScene.swift in Sources */,
 				63D9B1CE2A67E5F5001A4FCA /* TabViewModel.swift in Sources */,
 				63D9B1E32A681907001A4FCA /* HomeScene.swift in Sources */,
-				63CFB73E2A6ECD0800411E33 /* CustomTabView.swift in Sources */,
 				63D9B1E62A681999001A4FCA /* FeedScene.swift in Sources */,
 				63D9B1EC2A681A1F001A4FCA /* ProfileScene.swift in Sources */,
 				63D9B1D02A67E62D001A4FCA /* TabLocalizing.swift in Sources */,

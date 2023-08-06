@@ -7,7 +7,7 @@ struct X_AppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TabScene(items: TabItems.allCases, selectedTab: $selectedTab, content: { feature in
+            CustomTabView(items: TabItems.allCases, selectedTab: $selectedTab, content: { feature in
                 switch feature {
                 case .home:
                     NavigationStack {
